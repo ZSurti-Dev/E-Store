@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useUser } from '../../context/UserContext';
 import axios from 'axios';
-import './Login.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -38,54 +38,70 @@ const Login = () => {
   };
 
   return (
-    <div className="login-page">
-      <div className="login-container">
+    <div className="container min-vh-100 d-flex align-items-center justify-content-center py-5">
+      <div className="card shadow-sm" style={{ maxWidth: '400px', width: '100%' }}>
         {successMessage && (
-          <div className="success-message">
+          <div className="alert alert-success m-3 mb-0 py-2" role="alert">
             {successMessage}
           </div>
         )}
-        <div className="login-content">
-          <div className="login-header">
-            <h2>Login</h2>
-            <p>Get access to your Orders, Wishlist, and Recommendations</p>
+        <div className="card-body p-4">
+          <div className="text-center mb-4">
+            <h2 className="fw-bold">Login</h2>
+            <p className="text-muted">Get access to your Orders, Wishlist, and Recommendations</p>
           </div>
           
-          <form onSubmit={handleSubmit} className="login-form">
-            <div className="input-group">
+          <form onSubmit={handleSubmit}>
+            <div className="mb-3">
               <input
                 type="email"
+                className="form-control"
                 placeholder="Enter Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="input"
                 required
               />
             </div>
-            <div className="input-group">
+            <div className="mb-3">
               <input
                 type="password"
+                className="form-control"
                 placeholder="Enter Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="input"
                 required
               />
             </div>
             
-            {error && <p className="error">{error}</p>}
+            {error && (
+              <div className="alert alert-danger py-2" role="alert">
+                {error}
+              </div>
+            )}
             
-            <button type="submit" className="button">Login</button>
+            <button type="submit" className="btn btn-primary w-100 mb-3">
+              Login
+            </button>
             
-            <div className="divider">OR</div>
+            <div className="position-relative my-4">
+              <hr />
+              <span className="position-absolute top-50 start-50 translate-middle bg-white px-3 text-muted">
+                OR
+              </span>
+            </div>
             
-            <button type="button" className="google-button">
+            <button type="button" className="btn btn-outline-secondary w-100 mb-3">
               Login with Google
             </button>
           </form>
           
-          <div className="signup-link">
-            New to Website? <Link to="/signup">Create an account</Link>
+          <div className="text-center">
+            <p className="mb-0">
+              New to Website?{' '}
+              <Link to="/signup" className="text-decoration-none">
+                Create an account
+              </Link>
+            </p>
           </div>
         </div>
       </div>

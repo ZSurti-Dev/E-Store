@@ -5,6 +5,7 @@ import Homepage from './Pages/Homepage';
 import Login from './components/Login/Login';
 import Signup from './components/Signup/Signup';
 import Header from './components/Header/Header';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 function App() {

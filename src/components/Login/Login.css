@@ -1,176 +1,120 @@
-.login-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Login.css */
+.container {
   min-height: 100vh;
-  background-color: #f1f3f6;
-  padding: 20px;
-}
-
-.login-container {
-  width: 100%;
-  max-width: 400px;
-  background: white;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.login-content {
-  padding: 24px;
-}
-
-.login-header {
-  text-align: center;
-  margin-bottom: 24px;
-}
-
-.login-header h2 {
-  margin-bottom: 8px;
-  color: #333;
-}
-
-.login-header p {
-  color: #666;
-  font-size: 14px;
-}
-
-.login-form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.input-group {
-  position: relative;
-}
-
-.input {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 14px;
-}
-
-.success-message {
-  background-color: #4CAF50;
-  color: white;
-  padding: 15px;
-  border-radius: 4px;
-  margin-bottom: 20px;
-  text-align: center;
-  animation: fadeIn 0.5s;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.input:focus {
-  border-color: #2874f0;
-  outline: none;
-}
-
-.button {
-  background-color: #2874f0;
-  color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.button:hover {
-  background-color: #1c5ac7;
-}
-
-.divider {
-  text-align: center;
-  margin: 16px 0;
-  position: relative;
-}
-
-.divider::before,
-.divider::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  width: 45%;
-  height: 1px;
-  background-color: #ddd;
-}
-
-.divider::before {
-  left: 0;
-}
-
-.divider::after {
-  right: 0;
-}
-
-.google-button {
-  background-color: #fff;
-  color: #2874f0;
-  border: 1px solid #ddd;
-  padding: 12px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.google-button:hover {
   background-color: #f8f9fa;
 }
 
-.signup-link {
-  text-align: center;
-  margin-top: 24px;
-  font-size: 14px;
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08) !important;
 }
 
-.signup-link a {
-  color: #2874f0;
-  text-decoration: none;
+.card-body {
+  padding: 2rem !important;
+}
+
+.form-control {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  background-color: #f8f9fa;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #0d6efd;
+  background-color: #fff;
+}
+
+.btn {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
   font-weight: 500;
+  transition: all 0.3s ease;
 }
 
-.signup-link a:hover {
-  text-decoration: underline;
+.btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
 }
 
-.error {
-  color: #d32f2f;
-  font-size: 14px;
-  margin-top: 8px;
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.15);
 }
 
-.success-message {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px;
-  border-radius: 4px;
-  margin-bottom: 16px;
-  text-align: center;
-  animation: fadeIn 0.5s;
+.btn-outline-secondary {
+  border: 1px solid #dee2e6;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
+.btn-outline-secondary:hover {
+  background-color: #f8f9fa;
+  border-color: #dee2e6;
+  color: #212529;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.alert {
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.alert-danger {
+  background-color: #fff2f2;
+  border-color: #ffdfdf;
+  color: #dc3545;
+}
+
+.alert-success {
+  background-color: #f0fff4;
+  border-color: #dcffe4;
+  color: #198754;
+}
+
+h2 {
+  color: #212529;
+  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
+}
+
+p {
+  color: #6c757d;
+}
+
+.text-decoration-none {
+  color: #0d6efd;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.text-decoration-none:hover {
+  color: #0a58ca;
+  text-decoration: underline !important;
+}
+
+hr {
+  opacity: 0.15;
+}
+
+/* Divider styling */
+.position-relative {
+  margin: 2rem 0;
+}
+
+.position-relative span {
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .card-body {
+    padding: 1.5rem !important;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  h2 {
+    font-size: 1.5rem;
   }
 }
